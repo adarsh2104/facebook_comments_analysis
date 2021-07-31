@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <form method="POST" action="/class">
+            {% csrf_token  %} 
+            <label for='name' value='Name'> Name : <input type='text' name='name'></label>
+            <label for='phone' value='Phone'>Phone : <input type='number' name='phone'> 
+            
+            <button type="submit" value="Save">   Submit</button>
+        </form>
+    </body>
+
+</html>
