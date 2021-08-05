@@ -3,7 +3,8 @@ from .views import ClassView
 
 urlpatterns = [
 
- path('class/<str:query>',ClassView.as_view(),name='class_views'),
+ path('search/<str:query>',ClassView.as_view(),name='search_views'),
+ path('suggest/',ClassView.as_view(),name='search_views'),
 ]
 
 

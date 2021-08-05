@@ -37,18 +37,31 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
     'request_client'
 ]
+
+
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
+
+
+
+
 
 ROOT_URLCONF = 'fb_search_analysis.urls'
 
@@ -102,22 +115,29 @@ DATABASES = {
 
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:5000/',
+    'localhost:3000/',
+    'localhost:3001/',
+    '127.0.0.1'
 )
 # CSRF_COOKIE_DOMAIN = "localhost:83"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
-    ),
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.AllowAny',
+#     ),
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.BasicAuthentication',
+#         'rest_framework.authentication.TokenAuthentication',
+#     ),
+# }
 
+
+REST_FRAMEWORK = {
+		'DEFAULT_PERMISSION_CLASSES': [
+	        'rest_framework.permissions.AllowAny',
+    		]}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators

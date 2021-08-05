@@ -74,6 +74,7 @@ def review_type(compound_scores:list=[0]) -> Literal['Positive','Negative']:
 
 
 def main(comment_lst:list=[]):
+    review = None
     nested_sent_token = [nltk.sent_tokenize(lst) for lst in comment_lst]
     flat_sent_token = [item for sublist in nested_sent_token for item in sublist]
     sents = normalize(flat_sent_token)
@@ -81,9 +82,13 @@ def main(comment_lst:list=[]):
     sentiment = []
     compound_scores = []
     for sent in sents:
-        sent_scores = sid.polarity_scores(sent)
-        compound_scores.append(sent_scores['compound'])
-        sentiment.append((sent, sent_scores))
-
-    review = review_type(compound_scores)
+        if len(sent) > 35:
+            sent_scores = sid.polarity_scores(sent)
+            compound_scores.append(sent_scores['compound'])
+            sentiment.append({'comment':sent,**sent_scores})
+    
+    if len(compound_scores) > 0:
+        review = review_type(compound_scores)
+    
     return sentiment,review
+
