@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000/',
+    'localhost:3001/',
+    '127.0.0.1'
+)
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 # Application definition
 
@@ -42,16 +50,10 @@ INSTALLED_APPS = [
     'request_client'
 ]
 
-
-
-
-
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -66,8 +68,11 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'fb_search_analysis.urls'
 
 FB_USER_NAME   = 'alerts@tvadindx.com'
+
 FB_PASSWORD    = 'Alerts#1234'  
+
 FB_LOGIN_URL   = 'https://www.facebook.com/'
+
 SCREENSHOT_DIR = BASE_DIR  + '/Screenshots/'
 
 COOKIE_FILE = "cookies.pkl"
@@ -113,25 +118,6 @@ DATABASES = {
     }
 }
 
-
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000/',
-    'localhost:3001/',
-    '127.0.0.1'
-)
-# CSRF_COOKIE_DOMAIN = "localhost:83"
-
-CORS_ORIGIN_ALLOW_ALL = True
-
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES': (
-#         'rest_framework.permissions.AllowAny',
-#     ),
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-#         'rest_framework.authentication.BasicAuthentication',
-#         'rest_framework.authentication.TokenAuthentication',
-#     ),
-# }
 
 
 REST_FRAMEWORK = {
