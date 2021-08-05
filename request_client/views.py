@@ -25,14 +25,7 @@ class SearchView(APIView):
     def post(self, request, query=''):
         response_data = {}
         status = 200
-        # comment_lst = PostComments.objects.filter(fk_keyword__keyword=query).values_list('comment',flat=True)
-        # comments,review = Sentiment_analyzer(comment_lst)
-        # response_data = {
-        #                 'comments':comments,
-        #                 'review': review
-        #             }
-        # return HttpResponse(json.dumps(response_data),content_type='application/json',status=200)
-
+        
         try:
             if query is not '':
                 comments_for_query = RequestClient().main(search_keyword=query)

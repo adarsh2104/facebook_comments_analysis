@@ -45,7 +45,7 @@ Button{
 }
 
 #root{
-    background: url('https://img.freepik.com/free-vector/elegant-white-background-with-shiny-lines_1017-17580.jpg?size=626&ext=jpg') no-repeat center center fixed;
+    background: url('../image/bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

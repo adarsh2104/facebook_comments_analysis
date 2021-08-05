@@ -27,12 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['http://localhost:3001/','localhost:3001/','localhost:3000/','127.0.0.1','localhost']
 
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000/',
-    'localhost:3001/',
-    '127.0.0.1',
-    'http://localhost:3001/'
-)
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://127.0.0.1',
+]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -148,7 +147,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 

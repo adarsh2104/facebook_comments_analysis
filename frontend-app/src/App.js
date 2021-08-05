@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import SearchForm from './components/search_form'
 import './static/css/common.css';
 class App extends React.Component {

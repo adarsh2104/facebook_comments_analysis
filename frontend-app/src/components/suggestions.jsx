@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Row, Col, Input, Button, Label, Table, NavLink } from 'reactstrap';
+import React from 'react';
 import axios from 'axios';
 import config from '../config/config.js'
 
