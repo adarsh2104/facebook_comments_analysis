@@ -1,0 +1,42 @@
+div{
+    margin-top: 20px;
+    margin-left: 7px;
+}
+
+Button{
+    margin:5px;
+}
+
+.suggestions{
+    white-space: "unset";
+    text-align: "left";
+    font-size: 'larger';
+}
+
+#result_table_head{
+    font-size: larger;
+    background-color: #90EE90;
+    white-space: unset;
+    text-align: center;
+}
+
+#result_table{
+    width: 100%;
+}
+
+#root{
+    background: url('https://img.freepik.com/free-vector/elegant-white-background-with-shiny-lines_1017-17580.jpg?size=626&ext=jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.performance_row:nth-child(even) {  
+    background-color:#0000000d;  }
+
+
+.performance_row:nth-child(){
+    padding: 5px;
+}    
