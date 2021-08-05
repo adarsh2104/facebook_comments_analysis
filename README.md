@@ -1,1 +1,0 @@
-# djnago-rest-quick-start
