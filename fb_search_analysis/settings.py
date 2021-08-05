@@ -25,16 +25,18 @@ SECRET_KEY = 'dmi!l9(n$p$+1%^j#@t*rq!db(=$1!a5n%gva6)cceils4hjw3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://localhost:3001/','localhost:3001/','localhost:3000/','127.0.0.1','localhost']
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000/',
     'localhost:3001/',
-    '127.0.0.1'
+    '127.0.0.1',
+    'http://localhost:3001/'
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+DRIVER_PATH = '/usr/lib/chromium-browser/chromedriver'
 
 # Application definition
 
@@ -62,14 +64,11 @@ MIDDLEWARE = [
 ]
 
 
-
-
-
 ROOT_URLCONF = 'fb_search_analysis.urls'
 
-FB_USER_NAME   = 'alerts@tvadindx.com'
+FB_USER_NAME   = ''
 
-FB_PASSWORD    = 'Alerts#1234'  
+FB_PASSWORD    = ''  
 
 FB_LOGIN_URL   = 'https://www.facebook.com/'
 
@@ -164,3 +163,45 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 os.makedirs(SCREENSHOT_DIR,exist_ok=True)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'standard': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+    },
+    'handlers': {
+        'logfile': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': BASE_DIR + "/logfile",
+            'maxBytes': 50000,
+            'backupCount': 2,
+            'formatter': 'standard',
+        },
+        'console':{
+            'level':'INFO',
+            'class':'logging.StreamHandler',
+            'formatter': 'standard'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers':['console'],
+            'propagate': True,
+            'level':'WARN',
+        },
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'request_client': {
+            'handlers': ['console', 'logfile'],
+            'level': 'DEBUG',
+        },
+    }
+}

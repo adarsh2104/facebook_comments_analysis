@@ -20,6 +20,7 @@ from django.urls import path,include
 urlpatterns = [
 
     path('api/',include('request_client.urls')),
+    path('',include('request_client.urls')),
 
 
 ]

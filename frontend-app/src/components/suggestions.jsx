@@ -15,11 +15,18 @@ class Sugguestions extends React.Component {
     }
     componentDidMount() {
         let self = this;
-        axios.get(config.SEARCH_SUGGEST)
+        axios.get(config.SEARCH_SUGGEST,
+            {
+                headers: {
+                    'Sec-Fetch-Mode': 'cors',
+                }
+            }
+
+        )
             .then(function (json) {
 
                 let response_data = json.data
-                console.log('=SEARCH_SUGGEST=>', response_data.suggestions)
+                // console.log('=SEARCH_SUGGEST=>', response_data.suggestions)
                 self.setState({ data: response_data.suggestions });
             })
             .catch(function (error) {
@@ -34,9 +41,9 @@ class Sugguestions extends React.Component {
                     return (
                         <li key={index} className="suggestions" >
                             {row.keyword}</li>
-                        )
-                         }
                     )
+                }
+                )
                 }
             </ul>
         </div>);

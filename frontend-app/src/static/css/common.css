@@ -13,6 +13,26 @@ Button{
     font-size: 'larger';
 }
 
+
+.performance_col{
+    padding: 5px;
+}
+
+
+.performance_row:nth-child(even) {  
+    background-color:#0000000d;  }
+
+
+.performance_row:nth-child(){
+    padding: 5px;
+}    
+
+
+/* .loader{
+    position: relative;
+    top: -52px;
+    left: 25%;
+} */
 #result_table_head{
     font-size: larger;
     background-color: #90EE90;
@@ -34,13 +54,3 @@ Button{
 }
 
 
-.performance_col{
-    padding: 5px;
-}
-.performance_row:nth-child(even) {  
-    background-color:#0000000d;  }
-
-
-.performance_row:nth-child(){
-    padding: 5px;
-}    
