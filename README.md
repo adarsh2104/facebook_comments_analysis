@@ -1,4 +1,4 @@
-#                                [Facebook Comment Analyzer](https://github.com/adarsh2104/facebook_comments_analysis) 
+##                               facebook_comments_analysis 
 
 A REST API based applications with following salient features:
 
@@ -27,6 +27,7 @@ A REST API based applications with following salient features:
 
 4.[Views](https://github.com/adarsh2104/facebook_comments_analysis/blob/main/request_client/views.py):
  * Class Based API Views for GET and POST requests.
+ * Used Django for Rest APIs.
  * Model Serializers for serializing/deserializing objects of PostComment and SearchKeyword Models.
  * Added logger for debugging the project.
 
@@ -41,6 +42,11 @@ A REST API based applications with following salient features:
 
 ### Database:
  * Used MySQL database for saving Search Keywords and Post Comments.
+ 
+ <p align="center"><img width="100%" height="700px" src="https://github.com/adarsh2104/facebook_comments_analysis/blob/main/Visuals/05.Search_keyword.png"></img></p>
+ <p align="center"><img width="100%" height="700px" src="https://github.com/adarsh2104/facebook_comments_analysis/blob/main/Visuals/06.PostCommenst.png"></img></p>
+ 
+
 
 ### Stacks Used:
 * Python 3.7
@@ -49,6 +55,6 @@ A REST API based applications with following salient features:
 * MySQL
 
 
-### NOTE
+### NOTE:
 Add your own Facebook login credentials in Djnago settings file for testing the project. :star2::star2::star2:
 
