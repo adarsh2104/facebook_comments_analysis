@@ -32,11 +32,11 @@ class SearchForm extends React.Component {
                             {this.props.comments.map((row, index) => {
                                 return (
                                     <tr key={index} className=" performance_row">
-                                        <td>{row.comment}</td>
-                                        <td>{row.compound}</td>
-                                        <td>{row.pos}</td>
-                                        <td>{row.neg}</td>
-                                        <td>{row.neu}</td>
+                                        <td className=" performance_col">{row.comment}</td>
+                                        <td className=" performance_col">{row.compound}</td>
+                                        <td className=" performance_col">{row.pos}</td>
+                                        <td className=" performance_col">{row.neg}</td>
+                                        <td className=" performance_col">{row.neu}</td>
                                     </tr>
 
                                 )

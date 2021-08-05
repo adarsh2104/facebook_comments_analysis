@@ -33,6 +33,10 @@ Button{
 
 }
 
+
+.performance_col{
+    padding: 5px;
+}
 .performance_row:nth-child(even) {  
     background-color:#0000000d;  }
 
