@@ -40,8 +40,8 @@ A REST API based applications with following salient features:
  * Saperate directory for saving Search termwise comments [screenshots](https://github.com/adarsh2104/facebook_comments_analysis/tree/main/Screenshots) 
  * Text analyzer implemented using [NTLK package](https://www.nltk.org/)
 
-### Database: SQL
- * Used MySQL database for saving Search Keywords and Post Comments.
+### [Database](https://github.com/adarsh2104/facebook_comments_analysis/tree/main/mysql-table-structure): SQL
+ * Used MySQL database for saving [Search Keywords](https://github.com/adarsh2104/facebook_comments_analysis/blob/main/mysql-table-structure/facebook_data_tables.sql) and [Post Comments](https://github.com/adarsh2104/facebook_comments_analysis/blob/main/mysql-table-structure/facebook_data_tables.sql).
  
  <p align="center"><img width="100%" height="700px" src="https://github.com/adarsh2104/facebook_comments_analysis/blob/main/Visuals/05.Search_keyword.png"></img></p>
  <p align="center"><img width="100%" height="700px" src="https://github.com/adarsh2104/facebook_comments_analysis/blob/main/Visuals/06.PostCommenst.png"></img></p>
