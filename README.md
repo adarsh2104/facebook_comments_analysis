@@ -12,7 +12,7 @@ A REST API based applications with following salient features:
 <p align="center"><img width="100%" height="700px" src="https://github.com/adarsh2104/facebook_comments_analysis/blob/main/Visuals/01.Home_page.png"></img></p>
 
 2.Query Search:
-  * Added a loader componenst to show processing request [react-loader](https://www.npmjs.com/package/react-loader)
+  * Added a loader component to show processing request [react-loader](https://www.npmjs.com/package/react-loader)
 <p align="center"><img width="100%" height="700px" src="https://github.com/adarsh2104/facebook_comments_analysis/blob/main/Visuals/02.Send_query_request.png"></img></p>
 
 3.Results Page:
