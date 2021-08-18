@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'request_client'
+    'request_client',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -112,7 +113,7 @@ WSGI_APPLICATION = 'fb_search_analysis.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hack_new',
+        'NAME': 'facebook_data',
         'USER':'root',
         'PASSWORD':'root',
         'HOST':'127.0.0.1',
@@ -122,11 +123,23 @@ DATABASES = {
 
 
 
-REST_FRAMEWORK = {
-		'DEFAULT_PERMISSION_CLASSES': [
-	        'rest_framework.permissions.AllowAny',
-    		]}
+# For open API
 
+# REST_FRAMEWORK = {
+# 		'DEFAULT_PERMISSION_CLASSES': [
+# 	        'rest_framework.permissions.AllowAny',
+#     		]}
+
+# JWT Token based API
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 

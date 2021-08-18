@@ -15,13 +15,15 @@ class SetResponseHeaderMiddleware:
 
         response = self.next_request_handler(request)
 
-        content_type = response.headers['Content-Type']
+        content_type = response.headers.get('Content-Type','')
 
         if content_type == 'application/json' :
             response = json.loads(response.content.decode('utf8'))
             response['token'] = 'This is a test token'
-        
-        return JsonResponse(response)
+            return JsonResponse(response)
+        else:
+            return response
+
 
 
 def ip_filter_middleware(request_handler_function):
