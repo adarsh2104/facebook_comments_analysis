@@ -59,7 +59,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    #  custom middleware
+    'middlewares.views.ip_filter_middleware',
+    'middlewares.views.SetResponseHeaderMiddleware'
 
+    
 ]
 
 
@@ -108,7 +112,7 @@ WSGI_APPLICATION = 'fb_search_analysis.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hack',
+        'NAME': 'hack_new',
         'USER':'root',
         'PASSWORD':'root',
         'HOST':'127.0.0.1',
