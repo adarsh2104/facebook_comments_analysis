@@ -36,7 +36,7 @@ A REST API based applications with following salient features:
  * Implemented Foreign Key relation between the models.
 
 6.[Utils](https://github.com/adarsh2104/facebook_comments_analysis/tree/main/request_client/utils):
- * Selenium based request client for collecting comments from Facebook posts and getting matching results.
+ * Selenium based request client for collecting comments from Facebook posts,taking screenshots and getting matching results.
  * Saperate directory for saving Search termwise comments [screenshots](https://github.com/adarsh2104/facebook_comments_analysis/tree/main/Screenshots) 
  * Text analyzer implemented using [NTLK package](https://www.nltk.org/)
 
