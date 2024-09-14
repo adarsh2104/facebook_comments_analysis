@@ -4,6 +4,11 @@ A REST API based applications with following salient features:
 
 ### [Frontend](https://github.com/adarsh2104/facebook_comments_analysis/tree/main/frontend-app): React.JS 
 
+### Stacks Used:
+* Python 3.7
+* Django 3.2.6
+* React.JS/CSS
+* MySQL
 
 1. Home Page:
   * A Form where the user can specify the keyword and start the search.
@@ -84,13 +89,6 @@ Run django's development server (starts on localhost:8000):
 ```bash
 python manage.py runserver
 ```
-
-
-### Stacks Used:
-* Python 3.7
-* Django 3.2.6
-* React.JS/CSS
-* MySQL
 
 
 ### NOTE:
